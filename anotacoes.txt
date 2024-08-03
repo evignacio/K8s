@@ -1,0 +1,7 @@
+Comandos 
+- Listar clusters configurados -> kube config get-clusters
+- Trocar de cluster -> kube config use-context [clusterName] 
+
+
+Arquivos importantes 
+- Arquivo de configuracao clusters -> ~/.kube/config (default path) 

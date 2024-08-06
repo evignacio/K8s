@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "pod-phpserver"
+  labels:
+    app: "phpserver"
+spec:
+  containers:
+  - name: container-phpserver
+    image: "evandroig/php-server:latest"
+

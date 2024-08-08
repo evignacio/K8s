@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset-php-server
+  labels:
+    app: phpserver
+spec:
+  selector:
+    matchLabels:
+      app: phpserver
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: phpserver
+    spec:
+      containers:
+      - name: pod-phpserver
+        image: "evandroig/php-server:latest"

@@ -1,6 +1,8 @@
 Comandos 
 - Listar clusters configurados -> kube config get-clusters
 - Trocar de cluster -> kube config use-context [clusterName] 
+- Applica configuracao a partir do arquivo informado -> kube apply -f [pathArquivo]
+- lista os detalhes sobre o pod - kube describe pod [podName]
 
 
 Arquivos importantes 

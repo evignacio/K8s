@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: replicaset-php-server
+  labels:
+    app: phpserver
+spec:
+  selector:
+    matchLabels:
+      app: phpserver
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: phpserver
+    spec:
+      containers:
+      - name: container-phpserver
+        image: "evandroig/php-server:v2"

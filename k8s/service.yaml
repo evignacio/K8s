@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-phpserver
+spec:
+  selector:
+    app: phpserver
+  ports:
+  - name: phpserver-service
+    port: 80
+    protocol: TCP

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: replicaset-php-server
+  name: deployment-phpserver
   labels:
     app: phpserver
 spec:

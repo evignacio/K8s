@@ -1,1 +1,1 @@
-<?php echo 'Server UP' ?>
+<?php echo "Server UP - V3 - Welcome ". getenv("name", true) ." !!" ?>

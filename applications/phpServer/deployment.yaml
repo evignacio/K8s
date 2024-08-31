@@ -16,7 +16,17 @@ spec:
     spec:
       containers:
       - name: container-phpserver
-        image: "evandroig/php-server:v5"
+        image: "evandroig/php-server:v11"
         env:
         - name: name
           value: Evandro Dunga
+        volumeMounts:
+        - name: config
+          mountPath: "/var/www/html/file/"
+      volumes:
+      - name: config
+        configMap:
+          name: configmap-family
+          items:
+          - key: members
+            path: myfamily.txt

@@ -16,7 +16,10 @@ spec:
     spec:
       containers:
       - name: container-phpserver
-        image: "evandroig/php-server:v11"
+        image: "evandroig/php-server:v14"
+        envFrom:
+        - secretRef:
+            name: php-server-secret
         env:
         - name: name
           value: Evandro Dunga

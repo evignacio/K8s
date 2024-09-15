@@ -17,6 +17,15 @@ spec:
       containers:
       - name: container-phpserver
         image: "evandroig/php-server:v14"
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          periodSeconds: 3
+          failureThreshold: 3
+          timeoutSeconds: 3
+          successThreshold: 1
+          initialDelaySeconds: 10
         livenessProbe:
           httpGet:
             path: /

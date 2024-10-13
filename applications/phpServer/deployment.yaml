@@ -59,7 +59,12 @@ spec:
         volumeMounts:
         - name: config
           mountPath: "/var/www/html/file/"
+        - name: php-server-pvc
+          mountPath: "/pvc"
       volumes:
+      - name: php-server-pvc
+        persistentVolumeClaim:
+          claimName: php-server-pvc
       - name: config
         configMap:
           name: configmap-family
